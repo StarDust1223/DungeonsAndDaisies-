@@ -15,7 +15,6 @@ if($request){
     <title>Document</title>
 </head>
 <body>
-<?php var_dump ($_SESSION["user"]); ?>
     <h1>Ai murit :(</h1>
     <h3>Vrei sa incerci din nou?</h3>
     <a href="../index.php" rel="noopener noreferrer">Incearca din nou</a>
