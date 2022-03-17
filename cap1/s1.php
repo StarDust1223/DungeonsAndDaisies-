@@ -20,16 +20,26 @@ include("../templates/header.php");
 ?>
 
     <h1>Ti-a iesit in cale o omida uriasa! Omida uriasa te-a muscat pentru -10 hp!</h1>
-    <h2><?php viata();?></h2>
-    <form action= "" method= "POST">
-    <label for="cefaci">Ce faci? </label>
-    <select name="cefaci" id="cefaci">
-        <option value="ataci">ataci</option>
-        <option value="fugi">fugi</option>
-        <option value="ascunzi">te ascunzi</option>
-    </select>
-    <button type="submit">Actioneaza!</button>
-    </form>
+    <div class="alert alert-primary" role="alert">
+            <?php viata()?>
+        </div>
+        <div class="row">
+            <div class="col">
+            <form action= "" method= "POST">
+                <label for="cefaci">Ce faci? </label>
+                <select name="cefaci" id="cefaci" class="form-control">
+                    <option value="ataci">ataci</option>
+                    <option value="fugi">fugi</option>
+                    <option value="ascunzi">te ascunzi</option>
+                </select>
+                <button class="btn btn-info mt-3" type="submit">Actioneaza!</button>
+            </form>
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+   
     <?php include("../templates/footer.php"); ?>
 
 <!-- session health -10
