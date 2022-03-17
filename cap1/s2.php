@@ -18,25 +18,25 @@ if($request){
     //header("Location: ../cap2");
 }
 ?>
+<?php include("../templates/header.php")?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>scenariu 2</title>
-</head>
-<body>
 <h1>Ti-a iesit in cale o arahnida uriasa! Arahnida uriasa te-a muscat pentru -15 hp!</h1>
-<form action= "" method= "POST">
-    <label for="cefaci">Ce faci? </label>
-    <select name="cefaci" id="cefaci">
-        <option value="ataci">ataci</option>
-        <option value="fugi">fugi</option>
-        <option value="ascunzi">te ascunzi</option>
-    </select>
-    <button type="submit">Actioneaza!</button>
-    </form>
-</body>
-</html>
+<div class="alert alert-danger"><?php viata()?></div>
+<div class="row">
+    <div class="col-6">
+
+    <form action= "" method= "POST">
+        <label for="cefaci">Ce faci? </label>
+        <select name="cefaci" id="cefaci" class="form-control">
+            <option value="ataci">ataci</option>
+            <option value="fugi">fugi</option>
+            <option value="ascunzi">te ascunzi</ option>
+        </select>
+        <button class="btn btn-warning mt-3" type="submit">Actioneaza!</button>
+        </form>
+
+    </div>
+    <div class="col-3">...imagine</div>
+    <div class="col-3">...imagine</div>
+</div>
+<?php include("../templates/footer.php")?>
