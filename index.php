@@ -9,18 +9,12 @@ var_dump ($_SESSION["user"]);
 if($_SESSION["user"]){
     header("Location: cap1");
 }
+
+include("templates/header.php");
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dungeons and Daisies</title>
-</head>
-<body>
+
     <form action= "" method= "POST">
     <label for="username">Numele tau: </label>
     <input type="text" name="username" id="username" />
@@ -33,5 +27,4 @@ if($_SESSION["user"]){
     <button type="submit">Incepe aventura!</button>
     </form>
     <img src="images/zambila.jpg" alt="Zambila">
-</body>
-</html>
+<?php include("templates/footer.php");?>

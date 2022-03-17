@@ -15,20 +15,12 @@ if($request){
         $_SESSION["cap1"]["damage"]=damage(0);
     }
     finish("../cap2");
-    //header("Location: ../cap2");
 }
+include("../templates/header.php");
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scenariu 1</title>
-</head>
-<body>
     <h1>Ti-a iesit in cale o omida uriasa! Omida uriasa te-a muscat pentru -10 hp!</h1>
+    <h2><?php viata();?></h2>
     <form action= "" method= "POST">
     <label for="cefaci">Ce faci? </label>
     <select name="cefaci" id="cefaci">
@@ -38,8 +30,7 @@ if($request){
     </select>
     <button type="submit">Actioneaza!</button>
     </form>
-</body>
-</html>
+    <?php include("../templates/footer.php"); ?>
 
 <!-- session health -10
 3 cap+final
