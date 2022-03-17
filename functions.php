@@ -2,7 +2,6 @@
 session_start();
 function damage($damage){
     $_SESSION["hp"]=$_SESSION["hp"]-$damage;
-   echo "viata ta este: " . $_SESSION["hp"];
    return $damage;
 }
 
@@ -16,4 +15,7 @@ function finish($next){
     }
 }
 
+function viata(){
+    echo "viata ta este: " . $_SESSION["hp"];
+}
 ?>
