@@ -15,9 +15,6 @@ include("templates/header.php");
 
     <div class="row">
         <div class="col">
-        <div class="alert alert-primary" role="alert">
-            <?php viata()?>
-        </div>
         <form action= "" method= "POST">
             <label for="username">Numele tau: </label>
             <input type="text" name="username" id="username" class="form-control" />
