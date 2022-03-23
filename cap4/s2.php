@@ -37,7 +37,7 @@ if($request){
             </form>
             </div>
             <div class="col">
-            <img class="img img-responsive" src="images/acidRain.jpg" alt="Ploaie acida">
+            <img class="img img-responsive" src="../images/acidRain.jpg" alt="Ploaie acida">
             </div>
         </div>
     <?php include("../templates/footer.php")?>

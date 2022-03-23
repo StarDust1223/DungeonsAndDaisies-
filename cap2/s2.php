@@ -38,7 +38,7 @@ if($request){
             </form>
             </div>
             <div class="col">
-            <img class="img img-responsive" src="images/kid.jpg" alt="Copil >:[">
+            <img class="img img-responsive" src="../images/kid.jpg" alt="Copil >:[">
             </div>
         </div>
     <?php include("../templates/footer.php")?>

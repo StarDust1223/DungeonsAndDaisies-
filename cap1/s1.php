@@ -35,7 +35,7 @@ include("../templates/header.php");
             </form>
             </div>
             <div class="col">
-            <img class="img img-responsive" src="images/omida.jpg" alt="Omida">
+            <img class="img img-responsive" src="images/../omida.jpg" alt="Omida">
             </div>
         </div>
    
