@@ -23,13 +23,23 @@ if($request){
 
 <h4>Ai ales:<?php echo $_SESSION["cap4"]["cefaci"] . $_SESSION["cap4"]["damage"]?> </h4>
 <h1>A inceput sa bata crivatul! Iti degera frunzele pentru -25 hp!</h1>
-<form action= "" method= "POST">
-    <label for="cefaci">Ce faci? </label>
-    <select name="cefaci" id="cefaci">
-        <option value="ataci">ataci</option>
-        <option value="fugi">fugi</option>
-        <option value="ascunzi">te ascunzi</option>
-    </select>
-    <button type="submit">Actioneaza!</button>
-    </form>
+<div class="alert alert-primary" role="alert">
+            <?php viata()?>
+        </div>
+        <div class="row">
+            <div class="col">
+            <form action= "" method= "POST">
+                <label for="cefaci">Ce faci? </label>
+                <select name="cefaci" id="cefaci" class="form-control">
+                    <option value="ataci">ataci</option>
+                    <option value="fugi">fugi</option>
+                    <option value="ascunzi">te ascunzi</option>
+                </select>
+                <button class="btn btn-info mt-3" type="submit">Actioneaza!</button>
+            </form>
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
     <?php include("../templates/footer.php")?>

@@ -19,24 +19,25 @@ if($request){
 }
 ?>
 <?php include("../templates/header.php")?>
-`
+
 <h1>Ti-a iesit in cale o arahnida uriasa! Arahnida uriasa te-a muscat pentru -15 hp!</h1>
-<div class="alert alert-danger"><?php viata()?></div>
-<div class="row">
-    <div class="col-6">
+    <div class="alert alert-primary" role="alert">
+            <?php viata()?>
+        </div>
+        <div class="row">
+            <div class="col">
+            <form action= "" method= "POST">
+                <label for="cefaci">Ce faci? </label>
+                <select name="cefaci" id="cefaci" class="form-control">
+                    <option value="ataci">ataci</option>
+                    <option value="fugi">fugi</option>
+                    <option value="ascunzi">te ascunzi</option>
+                </select>
+                <button class="btn btn-info mt-3" type="submit">Actioneaza!</button>
+            </form>
+            </div>
+            <div class="col">
 
-    <form action= "" method= "POST">
-        <label for="cefaci">Ce faci? </label>
-        <select name="cefaci" id="cefaci" class="form-control">
-            <option value="ataci">ataci</option>
-            <option value="fugi">fugi</option>
-            <option value="ascunzi">te ascunzi</ option>
-        </select>
-        <button class="btn btn-warning mt-3" type="submit">Actioneaza!</button>
-        </form>
-
-    </div>
-    <div class="col-3">...imagine</div>
-    <div class="col-3">...imagine</div>
-</div>
+            </div>
+        </div>
 <?php include("../templates/footer.php")?>
