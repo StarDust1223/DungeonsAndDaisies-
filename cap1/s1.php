@@ -41,7 +41,3 @@ include("../templates/header.php");
         </div>
    
     <?php include("../templates/footer.php"); ?>
-
-<!-- session health -10
-3 cap+final
-(include) -->

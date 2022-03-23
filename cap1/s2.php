@@ -19,7 +19,7 @@ if($request){
 }
 ?>
 <?php include("../templates/header.php")?>
-
+`
 <h1>Ti-a iesit in cale o arahnida uriasa! Arahnida uriasa te-a muscat pentru -15 hp!</h1>
 <div class="alert alert-danger"><?php viata()?></div>
 <div class="row">
