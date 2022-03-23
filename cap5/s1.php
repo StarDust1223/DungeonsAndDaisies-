@@ -4,7 +4,6 @@ damage(34);
 $request = isset($_POST)?$_POST:null;
 $_SESSION["cap5"]=$request;
 if($request){
-    //aici tratam formularul
     if($request["cefaci"]==="ataci"){
        $_SESSION["cap5"]["damage"]=damage(rand(-10,10));
     }
@@ -15,7 +14,6 @@ if($request){
         $_SESSION["cap5"]["damage"]=damage(0);
     }
     finish("../final/bine.php");
-    //header("Location: ../cap2");
 }
 ?>
 
@@ -40,7 +38,7 @@ if($request){
             </form>
             </div>
             <div class="col">
-
+            <img class="img img-responsive" src="images/paduchi.jpg" alt="Paduchi">
             </div>
         </div>
     <?php include("../templates/footer.php")?>

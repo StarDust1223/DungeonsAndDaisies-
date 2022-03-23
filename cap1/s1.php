@@ -4,7 +4,6 @@ damage(10);
 $request = isset($_POST)?$_POST:null;
 $_SESSION["cap1"]=$request;
 if($request){
-    //aici tratam formularul
     if($request["cefaci"]==="ataci"){
        $_SESSION["cap1"]["damage"]=damage(rand(-10,10));
     }
@@ -36,7 +35,7 @@ include("../templates/header.php");
             </form>
             </div>
             <div class="col">
-
+            <img class="img img-responsive" src="images/omida.jpg" alt="Omida">
             </div>
         </div>
    

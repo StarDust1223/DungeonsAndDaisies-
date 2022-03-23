@@ -3,7 +3,6 @@ include ("../functions.php");
 $request = isset($_POST)?$_POST:null;
 $_SESSION["cap5"]=$request;
 if($request){
-    //aici tratam formularul
     if($request["cefaci"]==="accepti"){
         $_SESSION["cap5"]["damage"]=damage(-35);
     }
@@ -14,7 +13,6 @@ if($request){
         $_SESSION["cap5"]["damage"]=damage(35);
     }
     finish("../final/bine.php");
-    //header("Location: ../cap2");
 }
 ?>
 
@@ -38,7 +36,7 @@ if($request){
             </form>
             </div>
             <div class="col">
-
+            <img class="img img-responsive" src="images/bondar.jpg" alt="Bondar">
             </div>
         </div>
     <?php include("../templates/footer.php")?>
