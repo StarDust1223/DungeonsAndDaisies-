@@ -1,6 +1,7 @@
 <?php
 include("../functions.php");
 damage(10);
+
 $request = isset($_POST)?$_POST:null;
 $_SESSION["cap1"]=$request;
 if($request){
@@ -24,18 +25,10 @@ include("../templates/header.php");
         </div>
         <div class="row">
             <div class="col">
-            <form action= "" method= "POST">
-                <label for="cefaci">Ce faci? </label>
-                <select name="cefaci" id="cefaci" class="form-control">
-                    <option value="ataci">ataci</option>
-                    <option value="fugi">fugi</option>
-                    <option value="ascunzi">te ascunzi</option>
-                </select>
-                <button class="btn btn-info mt-3" type="submit">Actioneaza!</button>
-            </form>
+           <?php formular(["ataci", "fugi", "ascunzi"]) ?>
             </div>
             <div class="col">
-            <img class="img img-responsive" src="../images/omida.jpg" alt="Omida">
+            <img class="img img-responsive" src="../images/omida.png" alt="Omida">
             </div>
         </div>
    

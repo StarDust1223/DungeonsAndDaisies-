@@ -25,15 +25,7 @@ if($request){
         </div>
         <div class="row">
             <div class="col">
-            <form action= "" method= "POST">
-                <label for="cefaci">Ce faci? </label>
-                <select name="cefaci" id="cefaci" class="form-control">
-                    <option value="accepti">accepti</option>
-                    <option value="refuzi">refuzi</option>
-                    <option value="injuri">injuri</option>
-                </select>
-                <button class="btn btn-info mt-3" type="submit">Actioneaza!</button>
-            </form>
+            <?php formular(["accepti", "refuzi", "injuri"]) ?>
             </div>
             <div class="col">
             <img class="img img-responsive" src="../images/bondar.jpg" alt="Bondar">
