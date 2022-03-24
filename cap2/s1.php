@@ -1,20 +1,14 @@
 <?php
 include("../functions.php");
 damage(30);
-$request = isset($_POST)?$_POST:null;
-$_SESSION["cap2"]=$request;
-if($request){
-    if($request["cefaci"]==="ataci"){
-       $_SESSION["cap2"]["damage"]=damage(rand(-10,10));
-    }
-    if($request["cefaci"]==="fugi"){
-        $_SESSION["cap2"]["damage"]=damage(rand(0,10));
-    }
-    if($request["cefaci"]==="ascunzi"){
-        $_SESSION["cap2"]["damage"]=damage(0);
-    }
-    finish("../cap3");
-}
+
+$actions = [
+    "ataci" => rand(-10,10),
+    "fugi"=> rand(0,10),
+    "ascunzi"=>0
+
+];
+proceseaza($actions, "cap2", "cap3");
 
 ?>
 
@@ -26,10 +20,11 @@ if($request){
         </div>
         <div class="row">
             <div class="col">
-            ?php formular(["ataci", "fugi", "ascunzi"]) ?>
+            <?php formular(array_keys($actions)) ?>
             </div>
             <div class="col">
             <img class="img img-responsive" src="../images/tornado.jpg" alt="Tornada">
+            <?php imagine("princess.jpg", "Printesa") ?>
             </div>
         </div>
     <?php include("../templates/footer.php")?>

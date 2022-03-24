@@ -1,21 +1,17 @@
 <?php
 include("../functions.php");
 damage(10);
+$actions = [
+    "ataci" => rand(-10,10),
+    "fugi"=> rand(0,10),
+    "maIngrop"=> 2,
+    "beausuc"=>10,
+    "ascunzi"=>0,
+    "magie"=>32
 
-$request = isset($_POST)?$_POST:null;
-$_SESSION["cap1"]=$request;
-if($request){
-    if($request["cefaci"]==="ataci"){
-       $_SESSION["cap1"]["damage"]=damage(rand(-10,10));
-    }
-    if($request["cefaci"]==="fugi"){
-        $_SESSION["cap1"]["damage"]=damage(rand(0,10));
-    }
-    if($request["cefaci"]==="ascunzi"){
-        $_SESSION["cap1"]["damage"]=damage(0);
-    }
-    finish("../cap2");
-}
+];
+proceseaza($actions, "cap1", "cap2");
+
 include("../templates/header.php");
 ?>
 
@@ -25,10 +21,10 @@ include("../templates/header.php");
         </div>
         <div class="row">
             <div class="col">
-           <?php formular(["ataci", "fugi", "ascunzi"]) ?>
+           <?php formular(array_keys($actions)) ?>
             </div>
             <div class="col">
-            <img class="img img-responsive" src="../images/omida.png" alt="Omida">
+            <?php imagine("omida.png", "omida") ?>
             </div>
         </div>
    

@@ -1,22 +1,15 @@
 <?php
 include ("../functions.php");
 damage(15);
-$request = isset($_POST)?$_POST:null;
-$_SESSION["cap1"]=$request;
-if($request){
-    //aici tratam formularul
-    if($request["cefaci"]==="ataci"){
-       $_SESSION["cap1"]["damage"]=damage(rand(-10,10));
-    }
-    if($request["cefaci"]==="fugi"){
-        $_SESSION["cap1"]["damage"]=damage(rand(0,10));
-    }
-    if($request["cefaci"]==="ascunzi"){
-        $_SESSION["cap1"]["damage"]=damage(0);
-    }
-    finish("../cap2");
-    //header("Location: ../cap2");
-}
+$actions = [
+    "ataci" => rand(-10,10),
+    "fugi"=> rand(0,10),
+    "ascunzi"=>0,
+    "plec"=>10,
+    "plangi"=>-10
+
+];
+proceseaza($actions, "cap1", "cap2");
 ?>
 <?php include("../templates/header.php")?>
 
@@ -26,10 +19,10 @@ if($request){
         </div>
         <div class="row">
             <div class="col">
-            <?php formular(["ataci", "fugi", "ascunzi"]) ?>
+            <?php formular(array_keys($actions)) ?>
             </div>
             <div class="col">
-            <img class="img img-responsive" src="../images/spider.jpg" alt="Arahnida">
+            <?php imagine("arahnida.jpg", "arahnida") ?>
             </div>
         </div>
 <?php include("../templates/footer.php")?>
