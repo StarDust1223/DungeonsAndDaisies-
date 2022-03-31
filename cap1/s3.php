@@ -1,9 +1,9 @@
 <?php
 include ("../functions.php");
 $actions = [
-    "accepti" => rand(-10,10),
-    "refuzi"=> rand(0,10),
-    "injuri"=>0
+    "accepti" => -5,
+    "refuzi"=> 0,
+    "injuri"=>rand(0,10)
 
 ];
 proceseaza($actions, "cap1", "cap2");

@@ -1,20 +1,13 @@
 <?php
 include ("../functions.php");
 damage(10);
-$request = isset($_POST)?$_POST:null;
-$_SESSION["cap4"]=$request;
-if($request){
-    if($request["cefaci"]==="ataci"){
-       $_SESSION["cap4"]["damage"]=damage(rand(-10,10));
-    }
-    if($request["cefaci"]==="fugi"){
-        $_SESSION["cap4"]["damage"]=damage(rand(0,10));
-    }
-    if($request["cefaci"]==="ascunzi"){
-        $_SESSION["cap4"]["damage"]=damage(0);
-    }
-    finish("../cap5");
-}
+$actions = [
+    "ataci" => rand(-10,10),
+    "fugi"=> rand(0,10),
+    "ascunzi"=>0
+
+];
+proceseaza($actions, "cap4", "cap5");
 ?>
 
 <?php include("../templates/header.php")?>

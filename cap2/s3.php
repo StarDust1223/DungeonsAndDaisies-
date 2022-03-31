@@ -1,21 +1,12 @@
 <?php
 include("../functions.php");
-$request = isset($_POST)?$_POST:null;
-$_SESSION["cap2"]=$request;
-if($request){
-    if($request["cefaci"]==="accepti"){
-        $_SESSION["cap2"]["damage"]=damage(-17);
-    }
-    if($request["cefaci"]==="refuzi"){
+$actions = [
+    "accepti" => -17,
+    "refuzi"=> 0,
+    "injuri"=>rand(0,10)
 
-        $_SESSION["cap2"]["damage"]=damage(0);
-    }
-    if($request["cefaci"]==="injuri"){
-        $_SESSION["cap2"]["damage"]=damage(35);
-    }
-    finish("../cap3");
-}
-
+];
+proceseaza($actions, "cap2", "cap3");
 ?>
 <?php include("../templates/header.php")?>
 
