@@ -11,6 +11,7 @@ function finish($next){
       
     }
     else{
+        score();
         return header("Location: $next");
     }
 }
@@ -56,5 +57,13 @@ function proceseaza($actions, $capitol, $nextCap){
     }
 
     
+}
+
+function score(){
+    if (isset($_SESSION["score"])){
+        $_SESSION["score"]++;
+    }else{
+        $_SESSION["score"]=1;
+    }
 }
 ?>
