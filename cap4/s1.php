@@ -23,7 +23,7 @@ proceseaza($actions, "cap4", "cap5");
             <?php formular(["ataci", "fugi", "ascunzi"]) ?>
             </div>
             <div class="col">
-            <img class="img img-responsive" src="../images/ierbicid.jpg" alt="Ierbicid">
+            <img class="img img-responsive" src="../images/ierbicid.png" alt="Ierbicid">
             </div>
         </div>
     <?php include("../templates/footer.php")?>
