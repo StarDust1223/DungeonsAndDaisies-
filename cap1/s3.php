@@ -7,6 +7,7 @@ $actions = [
 
 ];
 proceseaza($actions, "cap1", "cap2");
+score();
 ?>
 
 <?php include("../templates/header.php")?>

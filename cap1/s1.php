@@ -11,6 +11,7 @@ $actions = [
 
 ];
 proceseaza($actions, "cap1", "cap2");
+score();
 
 include("../templates/header.php");
 ?>
