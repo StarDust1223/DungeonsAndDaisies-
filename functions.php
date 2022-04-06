@@ -49,7 +49,7 @@ function proceseaza($actions, $capitol, $nextCap){
         $_SESSION[$capitol] = $request;
         if(isset($request['cefaci'])){
             $_SESSION[$capitol]['cefaci'] = $request['cefaci'];
-            $_SESSION[$capitol]['damage'] = $actions[$request['cefaci']];
+            $_SESSION[$capitol]['damage'] = $actions[$request['damage']];
         } else {
             // de verificat ce s-a intamplat
         }
