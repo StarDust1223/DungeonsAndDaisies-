@@ -9,7 +9,7 @@ if($request){
 <?php include("../templates/header.php")?>
 
     <h1>Ai murit :(</h1>
-    <h2>Scorul tau a fost <?php echo $_SESSION["score"]?></h2>
+    <?php var_dump($_SESSION); ?>
     <h3>Vrei sa incerci din nou?</h3>
     <div class="col">
     <img class="img img-responsive" src="../images/ded.jpg" alt="oof :(">
