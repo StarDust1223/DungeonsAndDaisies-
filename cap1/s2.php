@@ -1,6 +1,6 @@
 <?php
 include ("../functions.php");
-damage(15);
+damage(1);
 $actions = [
     "ataci" => rand(-10,10),
     "fugi"=> rand(0,10),
@@ -10,7 +10,6 @@ $actions = [
 
 ];
 proceseaza($actions, "cap1", "cap2");
-score();
 ?>
 <?php include("../templates/header.php")?>
 

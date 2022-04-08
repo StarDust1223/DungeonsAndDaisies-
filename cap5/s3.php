@@ -7,7 +7,6 @@ $actions = [
 
 ];
 proceseaza($actions, "cap5", "final/bine.php");
-score();
 ?>
 
 <?php include("../templates/header.php")?>
