@@ -8,12 +8,20 @@ function damage($damage){
 function finish($next){
     if($_SESSION["hp"]<=0){
        return header("Location: ../final/rau.php");
-      
     }
     else{
-        score();
+        //scriem viata in fisier
+        if($next=="../final/bine.php"){
+        saveCastigator();
+        };
         return header("Location: $next");
     }
+}
+
+function saveCastigator(){
+    $file=fopen("../castigatori.txt", "a");
+    fwrite($file, $_SESSION["user"]['username'] . "/" . $_SESSION["hp"] . "\n");
+    fclose($file);
 }
 
 function viata(){
@@ -53,17 +61,9 @@ function proceseaza($actions, $capitol, $nextCap){
         } else {
             // de verificat ce s-a intamplat
         }
+
         finish("../$nextCap");
     }
-
-    
 }
 
-function score(){
-    if (isset($_SESSION["score"])){
-        $_SESSION["score"]++;
-    }else{
-        $_SESSION["score"]=1;
-    }
-}
 ?>
