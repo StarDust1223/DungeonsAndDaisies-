@@ -23,7 +23,7 @@ score();
             <?php formular(["ataci", "fugi", "ascunzi"]) ?>
             </div>
             <div class="col">
-            <img class="img img-responsive" src="../images/kid.jpg" alt="Copil >:[">
+            <img class="img img-responsive" src="../images/kid.png" alt="Copil >:[">
             </div>
         </div>
     <?php include("../templates/footer.php")?>

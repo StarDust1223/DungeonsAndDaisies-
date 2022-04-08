@@ -24,7 +24,6 @@ score();
             </div>
             <div class="col">
             <img class="img img-responsive" src="../images/tornado.jpg" alt="Tornada">
-            <?php imagine("princess.jpg", "Printesa") ?>
             </div>
         </div>
     <?php include("../templates/footer.php")?>
